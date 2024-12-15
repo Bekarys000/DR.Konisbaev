@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛОР Дәрігерінің Қабылдауы Анкетасы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="img"></div>
+    <div class="container">
+        <h1>ЛОР дәрігерінің қабылдауынан өткен пациенттерге арналған анкета</h1>
+        <p>Құрметті пациент, Сіздің пікіріңіз біз үшін маңызды! Анкетаны толтырып, біздің қызметімізді жақсартуға көмектесіңіз.</p>
+        
+        <form action="#" method="POST">
+            <label for="date">1. Қабылдау күні:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="name">2. Пациенттің аты-жөні:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">3. Жасыңыз:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="city">Қалаңыз:</label>
+            <select name="city" id="city" required>
+                <option value="Алматы">Алматы</option>
+                <option value="Қызылорда">Қызылорда</option>
+                <option value="Ақтау">Ақтау</option>
+                <option value="Шымкент">Шымкент</option>
+            </select>
+
+            <label>4. Қабылдауға келген себебіңіз:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="reason" value="Тамақ ауруы"> Тамақ ауруы</label>
+                <label><input type="checkbox" name="reason" value="Мұрынмен тыныс алу қиындықтары"> Мұрынмен тыныс алу қиындықтары</label>
+                <label><input type="checkbox" name="reason" value="Құлақ аурулары"> Құлақ аурулары</label>
+                <label><input type="checkbox" name="reason" value="Ұйқыдағы храп"> Ұйқыдағы храп</label>
+                <label><input type="checkbox" name="reason" value="Бас ауруы"> Бас ауруы</label>
+                <label><input type="checkbox" name="reason" value="Қалтырау"> Қалтырау</label>
+                <label><input type="checkbox" name="reason" value="Құлақтағы залалдану сезімі"> Құлақтағы залалдану сезімі</label>
+                <label><input type="checkbox" name="reason" value="Басқа"> Басқа (көрсетіңіз): <input type="text" name="other-reason"></label>
+            </div>
+
+            <label for="doctor-quality">5. Консультация барысында дәрігердің қызметін қалай бағалайсыз?</label>
+            <div class="rating-group">
+                <label>Дәрігердің түсіндірмелерінің айқындығы мен қолжетімділігі:</label>
+                <select name="clarity" id="doctor-quality">
+                    <option value="өте жақсы">Өте жақсы</option>
+                    <option value="жақсы">Жақсы</option>
+                    <option value="қанағаттанарлық">Қанағаттанарлық</option>
+                    <option value="қанағаттанбадым">Қанағаттанбадым</option>
+                </select>
+                
+                <label>Дәрігердің сіздің шағымдарыңызға назар аударуы:</label>
+                <select name="attention">
+                    <option value="өте жақсы">Өте жақсы</option>
+                    <option value="жақсы">Жақсы</option>
+                    <option value="қанағаттанарлық">Қанағаттанарлық</option>
+                </select>
+
+                <label>Диагностиканың сапасы:</label>
+                <select name="diagnosis-quality">
+                    <option value="өте жақсы">Өте жақсы</option>
+                    <option value="жақсы">Жақсы</option>
+                    <option value="қанағаттанарлық">Қанағаттанарлық</option>
+                    <option value="нашар">Нашар</option>
+                </select>
+
+                <label>Емдеу немесе ұсынылған кеңестердің сапасы:</label>
+                <select name="treatment-quality">
+                    <option value="өте жақсы">Өте жақсы</option>
+                    <option value="жақсы">Жақсы</option>
+                    <option value="қанағаттанарлық">Қанағаттанарлық</option>
+                    <option value="нашар">Нашар</option>
+                </select>
+            </div>
+
+            <label>6. Қосымша зерттеулер (анализдер, тексерулер) жүргізілді ме?</label>
+            <label><input type="radio" name="tests" value="иә"> Иә</label>
+            <label><input type="radio" name="tests" value="жоқ"> Жоқ</label>
+
+            <label>7. Сізге диагнозыңыз және ұсынылған емдеу туралы жеткілікті ақпарат берілді ме?</label>
+            <label><input type="radio" name="diagnosis-info" value="иә"> Иә</label>
+            <label><input type="radio" name="diagnosis-info" value="жоқ"> Жоқ</label>
+            <label><input type="radio" name="diagnosis-info" value="ішінра"> Ішінара</label>
+
+            <label>8. Консультациядан және емдеуден кейін жақсару сезінесіз бе?</label>
+            <label><input type="radio" name="improvement" value="иә"> Иә</label>
+            <label><input type="radio" name="improvement" value="жоқ"> Жоқ</label>
+            <label><input type="radio" name="improvement" value="жақсару жоқ, бірақ үміттемін"> Жақсару жоқ, бірақ үміттемін</label>
+
+            <label for="suggestions">9. Консультация немесе қызмет көрсету барысында не нәрсені жақсартуды қалайсыз?</label>
+            <textarea name="suggestions" id="suggestions" rows="4"></textarea>
+
+            <label>10. Сіз біздің ЛОР дәрігерімізді достарыңыз бен туыстарыңызға ұсынар ма едіңіз?</label>
+            <label><input type="radio" name="recommend" value="иә"> Иә</label>
+            <label><input type="radio" name="recommend" value="жоқ"> Жоқ</label>
+            <label><input type="radio" name="recommend" value="мүмкін"> Мүмкін</label>
+
+            <label for="comments">11. Қосымша пікірлер мен ұсыныстар:</label>
+            <textarea name="comments" id="comments" rows="4"></textarea>
+
+            <button type="submit">Жіберу</button>
+        </form>
+    </div>
+</body>
+</html>
